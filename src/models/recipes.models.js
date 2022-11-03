@@ -42,6 +42,23 @@ const Recipes = db.define('recipes',{
          key: 'id',
          model: Users
       }
+   },
+   categoryId:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      field: 'category_id',
+      references:{
+         key : 'id',
+         model: '' //! AGREGAR EL MODELO UNA VEZ CREADO
+      }
+   },
+   origin:{
+      type: DataTypes.STRING
+   },
+   likes:{
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      defaultValue: 0
    }
 })
 

@@ -1,6 +1,7 @@
 const db = require ('../utils/databases')
 const {DataTypes} = require('sequelize')
 const Users = require('./user.models')
+const Categories = require('./categories.models')
 
 const Recipes = db.define('recipes',{
    id:{
@@ -49,7 +50,7 @@ const Recipes = db.define('recipes',{
       field: 'category_id',
       references:{
          key : 'id',
-         model: '' //! AGREGAR EL MODELO UNA VEZ CREADO
+         model: Categories
       }
    },
    origin:{

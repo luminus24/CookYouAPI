@@ -5,7 +5,7 @@ const Types = require('./types.models')
 const Ingredients = db.define('ingredients', {
    id:{
       type: DataTypes.UUID,
-      primaryKey: false,
+      primaryKey: true,
       allowNull: false
    },
    name:{

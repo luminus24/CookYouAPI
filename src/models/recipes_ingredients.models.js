@@ -32,3 +32,5 @@ const RecipesIngredients = db.define('recipes_ingredients', {
       }
    }
 })
+
+module.exports = RecipesIngredients
